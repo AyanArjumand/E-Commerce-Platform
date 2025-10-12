@@ -1,6 +1,6 @@
-# 🛒 Full-Stack E-Commerce Platform
+# ✨ AYAN's Store - Premium E-Commerce Platform
 
-A modern, full-featured e-commerce web application built with the MERN stack (MongoDB, Express.js, React, Node.js) featuring secure authentication, shopping cart functionality, and integrated payment processing.
+A modern, full-featured e-commerce web application built with the MERN stack (MongoDB, Express.js, React, Node.js) featuring secure authentication, shopping cart functionality, integrated payment processing, and advanced UI/UX with glass morphism effects, gradient animations, and smooth transitions.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Node](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen.svg)
@@ -702,6 +702,6 @@ For support, email your.email@example.com or create an issue in the GitHub repos
 
 **⭐ If you like this project, please give it a star on GitHub! ⭐**
 
-Made with ❤️ by [Your Name]
+Made with ❤️ by [Ayan Arjumand](https://ayanarjumand.me)
 
 </div>

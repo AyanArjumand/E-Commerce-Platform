@@ -6,8 +6,8 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>E-Commerce Store</h3>
-            <p>Your one-stop shop for amazing products at great prices.</p>
+            <h3>✨ AYAN's Store</h3>
+            <p>Your premier destination for exceptional products at unbeatable prices. Quality guaranteed.</p>
           </div>
 
           <div className="footer-section">
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} E-Commerce Store. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} AYAN's Store. All rights reserved. | Crafted with ❤️</p>
         </div>
       </div>
     </footer>

@@ -27,9 +27,39 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1>Welcome to Our E-Commerce Store</h1>
-          <p>Discover amazing products at great prices</p>
-          <Link to="/products" className="btn btn-primary">Shop Now</Link>
+          <div className="hero-badge">Premium Quality Since 2024</div>
+          <h1 className="hero-title">
+            Welcome to <span className="brand-highlight">AYAN's Store</span>
+          </h1>
+          <p className="hero-subtitle">Discover Exceptional Products, Unbeatable Prices</p>
+          <div className="hero-buttons">
+            <Link to="/products" className="btn btn-primary btn-large">
+              <span>Shop Now</span>
+              <span className="btn-icon">→</span>
+            </Link>
+            <Link to="/products" className="btn btn-outline-light btn-large">
+              Explore Collection
+            </Link>
+          </div>
+          <div className="hero-stats">
+            <div className="stat-item">
+              <div className="stat-number">1000+</div>
+              <div className="stat-label">Products</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">5000+</div>
+              <div className="stat-label">Happy Customers</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">24/7</div>
+              <div className="stat-label">Support</div>
+            </div>
+          </div>
+        </div>
+        <div className="hero-decoration">
+          <div className="floating-shape shape-1"></div>
+          <div className="floating-shape shape-2"></div>
+          <div className="floating-shape shape-3"></div>
         </div>
       </section>
 

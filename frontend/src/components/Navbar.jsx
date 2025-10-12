@@ -18,7 +18,8 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <Link to="/" className="navbar-brand">
-          🛒 E-Commerce Store
+          <span className="brand-icon">✨</span>
+          <span className="brand-text">AYAN's Store</span>
         </Link>
 
         <div className="navbar-menu">

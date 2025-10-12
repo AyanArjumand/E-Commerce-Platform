@@ -1,7 +1,7 @@
 {
-  "name": "ecommerce-platform",
+  "name": "ayans-store",
   "version": "1.0.0",
-  "description": "Full-stack E-Commerce Platform MVP with React and Node.js",
+  "description": "AYAN's Store - Premium E-Commerce Platform with Advanced UI",
   "scripts": {
     "install:all": "cd backend && npm install && cd ../frontend && npm install",
     "dev:backend": "cd backend && npm run dev",
