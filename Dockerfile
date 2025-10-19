@@ -55,9 +55,9 @@ EXPOSE 5000 3000
 # Set environment variables
 ENV NODE_ENV=production
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:5000/api/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
+# Health check - use 127.0.0.1 for IPv4, longer start period for auto-seed
+HEALTHCHECK --interval=30s --timeout=10s --start-period=90s --retries=5 \
+  CMD node -e "require('http').get('http://127.0.0.1:5000/api/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)}).on('error', () => process.exit(1))"
 
 # Start the application
 ENTRYPOINT ["/app/docker-entrypoint.sh"]

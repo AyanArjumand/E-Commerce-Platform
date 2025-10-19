@@ -41,7 +41,11 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = config.PORT || 5000;
+const HOST = '0.0.0.0'; // Bind to all network interfaces
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`✅ Server running on http://${HOST}:${PORT}`);
+  console.log(`📊 Environment: ${config.NODE_ENV}`);
+  console.log(`🏥 Health check: http://${HOST}:${PORT}/api/health`);
+  console.log(`🚀 Ready to accept connections!`);
 });

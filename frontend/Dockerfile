@@ -26,9 +26,9 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copy built files from builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Add healthcheck
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD wget --quiet --tries=1 --spider http://localhost:3000 || exit 1
+# Add healthcheck - use 127.0.0.1 for IPv4
+HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=1 \
+  CMD wget --quiet --tries=1 --spider http://127.0.0.1:3000 || exit 1
 
 # Expose port
 EXPOSE 3000
