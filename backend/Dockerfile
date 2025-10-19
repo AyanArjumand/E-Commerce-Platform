@@ -12,7 +12,7 @@ RUN apk add --no-cache tini
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci --only=production && \
+RUN npm install --production && \
     npm cache clean --force
 
 # Copy application source

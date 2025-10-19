@@ -2,10 +2,9 @@
 node_modules
 npm-debug.log
 yarn-error.log
-package-lock.json
 yarn.lock
 
-# Environment files
+# Environment files (don't copy .env to Docker, use build args/environment variables)
 .env
 .env.local
 .env.*.local
