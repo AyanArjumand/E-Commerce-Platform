@@ -5,6 +5,9 @@
 ### **Removed .env Dependency**
 All environment variables are now hardcoded in configuration files for easy testing/demo.
 
+### **Added Auto-Seed Feature** 🌱
+Database automatically seeds with dummy data on first deployment - no manual steps needed!
+
 ### **Files Modified:**
 
 #### Backend Configuration:
@@ -20,6 +23,7 @@ All environment variables are now hardcoded in configuration files for easy test
 5. ✅ **`backend/middleware/authMiddleware.js`** - Uses config for JWT
 6. ✅ **`backend/controllers/orderController.js`** - Uses config for Stripe
 7. ✅ **`backend/seedData.js`** - Removed dotenv
+8. ✅ **`backend/utils/autoSeed.js`** (NEW) - Automatic database seeding on startup
 
 #### Frontend Configuration:
 1. ✅ **`frontend/src/config/env.js`** (NEW) - Hardcoded API URL
@@ -28,6 +32,7 @@ All environment variables are now hardcoded in configuration files for easy test
 #### Documentation:
 1. ✅ **`CONFIG_GUIDE.md`** - Comprehensive configuration guide
 2. ✅ **`DOCKER_BUILD_FIX.md`** - Docker troubleshooting
+3. ✅ **`AUTO_SEED_GUIDE.md`** - Auto-seed feature documentation
 
 ## 🗄️ Database Configuration
 
@@ -90,14 +95,33 @@ CLIENT_URL: 'https://your-frontend-url.com',  // <-- Change this
    - Click **"Redeploy"**
    - Wait for build
 
-### 4. Seed Database 🌱
+### 4. ~~Seed Database~~ ✅ AUTOMATIC! �
 
-After backend is running:
+**No manual seeding needed!** The database automatically seeds with dummy data when the server starts for the first time.
 
-**Option A: Via Coolify Terminal**
+**What happens automatically:**
+- ✅ Server checks if database is empty
+- ✅ Creates 3 test user accounts (1 admin + 2 users)
+- ✅ Creates 12 sample products across multiple categories
+- ✅ Logs success in server console
+
+**Test Accounts (Auto-created):**
+- Admin: `admin@ecommerce.com` / `admin123`
+- User: `john@example.com` / `password123`
+- User: `jane@example.com` / `password123`
+
+**If you still want to manually seed:**
 ```bash
-# In Coolify, open backend container terminal
+# Via Coolify terminal
 node seedData.js
+
+# Or via Docker
+docker exec -it backend-container node seedData.js
+```
+
+📖 **Read AUTO_SEED_GUIDE.md for more details**
+
+### 5. Test Application ✅
 ```
 
 **Option B: Via SSH**

@@ -2,9 +2,13 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const config = require('./config/env');
+const autoSeedDatabase = require('./utils/autoSeed');
 
-// Connect to database
-connectDB();
+// Connect to database and auto-seed if empty
+connectDB().then(() => {
+  // Auto-seed database with dummy data if it's empty
+  autoSeedDatabase();
+});
 
 const app = express();
 
